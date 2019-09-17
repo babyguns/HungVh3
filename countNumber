@@ -1,4 +1,30 @@
 function countNumber(x){
+    var count=0;
+    var devisor=[];
+    var empty=[];
+    for(var i=0;i<=(x/2);i++){
+        if(x %i==0){
+            devisor.push(i);
+        }
+        
+    }
+        var strdevisor=devisor.map(element=>element.toString());
+
+    var split=x.toString().split("");
+    for(var i=0;i<strdevisor.length;i++){
+        for(var j=0;j<split.length;j++){
+            if(strdevisor[i].indexOf(split[j])>=0){
+                count++
+            }
+        }
+    }
+    return ++count;
+
+}
+countNumber(12)
+
+//
+function countNumber(x){
 var divisor=[];
 for (let i=1;i<=x;i++)
 {
@@ -20,3 +46,4 @@ for (var i=0;i<hung.length;i++){
 
 }
 countNumber(12)
+

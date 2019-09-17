@@ -1,0 +1,22 @@
+function countNumber(x){
+var divisor=[];
+for (let i=1;i<=x;i++)
+{
+    if(x%i==0) {
+    divisor.push(i);}
+}
+var hung=divisor.map(element=>element.toString());
+var empty=[]
+var charx=x.toString().split("");;
+count=0;
+for (var i=0;i<hung.length;i++){
+ for(var j=0;j<charx.length;j++){
+     if(hung[i].indexOf(charx[j])>=0){
+         empty.push(hung[i]);
+     }
+ }
+ return empty
+}
+
+}
+countNumber(12)

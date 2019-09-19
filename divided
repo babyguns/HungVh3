@@ -1,0 +1,7 @@
+function divided(k){
+    var toint=parseInt(k);
+    if(k%3==0){
+return 'YES'
+    }else{return 'NO'}
+}
+divided("12345678901234567890324");

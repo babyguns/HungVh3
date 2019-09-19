@@ -1,27 +1,24 @@
 function digitsProduct(product){
+  var join
     var i=9;
-    empty=[];
-    divide=product;
-        while(i<=9){
-            
-            if(divide==0){
-                return 10;
-            }else if(divide <10){
-                return divide+10;
-            }            
-            if(divide%i==0){
-                divide=divide/i;
-                empty.unshift(i);
-                i=9;        
-            }
-            
-            i--;
-
-        }
-        if(empty=[]){
-            return -1;
-        }else{
-            return empty.join("");
-        }
+    var empty=[];
+    var divide=product;
+    while(i<=9 && i>1){
+      if(divide==0){
+          return 10;
+      }      
+      
+      if(divide%i==0){
+        divide=divide / i;
+        empty.unshift(i);
+        i=9
+      }
+       i--;
+    }
+    if(empty.length<1){
+      return -1;
+    }else{
+      return join=empty.join("")
+    }
 }
-digitsProduct(10);
+digitsProduct(450)

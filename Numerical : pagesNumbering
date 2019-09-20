@@ -1,0 +1,24 @@
+function pagesNumbering(n){
+let i=10;
+let num=n;
+let sumdigits=0;
+let count=0
+    if (num<10 && num>0) return n;
+    while(num>=10){
+        if(num<i){
+            i=i/10;
+            var numtostr=num.toString().split('');
+            count=num-i+1;
+            sumdigits+=(numtostr.length)*count;
+            num=num-count; 
+            if(num<10){
+            sumdigits+=num;
+            break;}  
+            i=10;
+            continue;
+        }   
+         i=i*10;
+    }
+   
+    return sumdigits;
+}

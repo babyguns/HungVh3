@@ -1,24 +1,28 @@
 function digitsProduct(product){
-  var join
     var i=9;
     var empty=[];
     var divide=product;
-    while(i<=9 && i>1){
-      if(divide==0){
+    if(divide==0){
           return 10;
-      }      
+      }   
+    while(i>1){
+      if(product<10){
+        empty.unshift(product);
+        break;
+      }
       
       if(divide%i==0){
         divide=divide / i;
         empty.unshift(i);
-        i=9
+        i=9;
+        continue;
       }
        i--;
     }
     if(empty.length<1){
       return -1;
     }else{
-      return join=empty.join("")
+      return Number(join=empty.join(""));
     }
 }
-digitsProduct(450)
+digitsProduct(19)

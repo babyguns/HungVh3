@@ -1,0 +1,22 @@
+function primeSum(n){
+    var number=0
+    for(let i=2;i<=n;i++){
+        if(KNSNT(i)){
+            number+=i;
+        }   
+    }
+    
+    return number%22082018;
+}
+
+function KNSNT(n){
+    if(n==1) return false;
+    if(n==2) return true;
+   
+    for(let i=2;i<n;i++){
+        if(n%i==0){
+            return false;
+        }
+    }
+    return true;
+}

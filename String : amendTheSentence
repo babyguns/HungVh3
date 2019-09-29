@@ -1,0 +1,3 @@
+function amendTheSentence(s){
+  return s.match(/[a-z]+|[A-Z][a-z]+|[A-Z]/g).join(' ').toLowerCase();
+}

@@ -1,0 +1,5 @@
+function formatString(input){
+let regex = /[a-z]+/g;
+    return input.match(regex).join(' ');
+}
+formatString(" abc   a aa  a ")

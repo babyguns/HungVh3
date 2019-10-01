@@ -1,0 +1,18 @@
+function checkPalindrome(inputString){
+    if(inputString.length==1) return true;
+    let arrinput=inputString.split('');
+    for(let i=0;i<arrinput.length;i++)
+    {
+        if(arrinput[i]!= arrinput[arrinput.length-i-1]){
+          return false;
+        }
+    }
+    return true;
+  }
+
+
+
+// For inputString = "aabaa", the output should be checkPalindrome(inputString) = true;
+checkPalindrome("aabaa");
+
+

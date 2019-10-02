@@ -1,0 +1,17 @@
+function keyboardRow(word){
+  let frow="qwertyuiopQWERTYUIOP"
+  let srow="asdfghjklASDFGHJKL"
+  let trow="zxcvbnmZXCVBNM"
+  let filterarr=[]
+  let empty=[]
+   for(let i=0;i<word.length;i++){
+        let array=word[i].split('');
+        filterarrfr=array.filter(ele=>frow.includes(ele));
+        filterarrfrsr=array.filter(ele=>srow.includes(ele));
+        filterarrtr=array.filter(ele=>trow.includes(ele));
+        if(filterarrfr.length==array.length || filterarrfrsr.length==array.length ||filterarrtr.length==array.length){
+          empty.push(word[i])
+        }       
+   }
+return empty;
+}

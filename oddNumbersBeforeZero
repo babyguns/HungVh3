@@ -1,0 +1,10 @@
+function oddNumbersBeforeZero(sequence){
+  let count=0;
+ let findzero=sequence.indexOf(0);
+  for(i=0;i<findzero;i++){
+    if(sequence[i]%2==1){
+      count++;
+    }
+  }
+return count
+}

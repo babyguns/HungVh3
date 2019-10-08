@@ -1,0 +1,6 @@
+function isPowerOfFour(n){
+    for(let i=0;i<=n/4;i++){
+        if(Math.pow(4,i)==n) return true;
+    }
+    return false
+}

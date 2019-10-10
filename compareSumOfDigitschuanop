@@ -1,0 +1,11 @@
+function compareSumOfDigits(input){
+  let oddarr=[];
+  let evenarr=[];
+  for(let i=0;i<input.length;i++){
+    input[i]%2==0?evenarr.push(input[i]):oddarr.push(input[i])
+  }
+  let sumodd=oddarr.map(ele=>parseInt(ele)).reduce((a,b)=>a+b,0)
+  let sumeven=evenarr.map(ele=>parseInt(ele)).reduce((a,b)=>a+b,0)
+  return sumodd-sumeven
+}
+compareSumOfDigits('012345')

@@ -1,0 +1,16 @@
+function sumOfProducts(n){
+    let divisor=[];
+    let sum=0;
+    for(let i=1;i<=n;i++){
+        if(n%i==0){
+            divisor.push(i);
+        }
+    }
+    for (let i=0;i<divisor.length;i++){
+        for(let j=i+1;j<divisor.length;j++){
+            sum +=divisor[i]*divisor[j];
+        }
+    }
+   return sum
+}
+console.log(sumOfProducts(6))

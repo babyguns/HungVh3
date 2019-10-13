@@ -1,0 +1,13 @@
+function removeDuplicateCharacters(str){
+    let stringinput=str;
+    let arrsplit=stringinput.split('');
+    let empty=[]
+    for(let i=0;i<arrsplit.length;i++){
+        if(stringinput.indexOf(arrsplit[i])==stringinput.lastIndexOf(arrsplit[i])){
+            empty.push(arrsplit[i])
+        }
+    }
+    return empty.join('');
+    
+
+}

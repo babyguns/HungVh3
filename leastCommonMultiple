@@ -1,0 +1,17 @@
+function leastCommonMultiple(inputArray){
+    let maxle=Math.max.apply(null,inputArray);
+    let array=inputArray;
+    let pivot=maxle;
+    let i=1;
+    
+    while(pivot>=maxle){
+        let result=pivot*i;
+       
+      if(array.filter((ele)=>result%ele==0).length == array.length){         
+          return result;   
+      }
+      i++;
+    }
+    
+}
+console.log(leastCommonMultiple([2,4,6,8,5,10,125,250]))

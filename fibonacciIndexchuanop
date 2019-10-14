@@ -1,0 +1,27 @@
+function fibonacciIndex(n) {
+
+    function fibonnaci(num) {
+        var a = 1,
+            b = 0,
+            temp;
+
+        while (num > 0) {
+            temp = a;
+            a = a + b;
+            b = temp;
+            num--;
+        }
+
+        return b;
+    }
+    
+    let i = 0;
+    while (i >= 0) {
+        let result = fibonnaci(i).toString();
+        if (result.length == n) {
+            return i;
+        }
+        i++;
+    }
+
+}
